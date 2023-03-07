@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-commerce Fake-API API baseada em arquivos .JSON</title>
+</head>
+<body>
+    <header> 
+        <h1 class="titulo">Lord of the Records</h1>
+        <nav class="nav">
+          <button class="btn-menu" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+              aria-expanded="false">
+              Menu<span class="hamburger"></span>
+          </button>
+          <ul class="menu" id="menu" role="menu">
+            <li><a href="#topico">Estilos</a></li>
+            <li><a href="#artistas">Artistas</a></li>
+            <li><a href="produtosAlbuns.html">Produtos</a></li>
+            <li><a href="/">Sobre</a></li>
+            <li><a href="index.html">Voltar</a></li>
+            
+        </ul>
+      </nav>
+    </header>
+   
+
+   <section>
+    
+    <div class="card">
+        <div class="album-img">
+            <div id="imagemMetallica"></div>
+        </div>
+
+        <div class="informacoes-do-album">
+            <div id="nomeMetallica"></div>
+            <div id="discoMetallica"></div>
+            <div id="estiloMetallica"></div>
+        </div>
+
+        <div class="card-valor">
+            <div id="precoMetallica"></div>
+        </div>
+        <button class="cssbuttons-io-button"> Comprar
+                <div class="icon">
+                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+                </div>
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="album-img">
+            <div id="imagemRedHot"></div>
+        </div>
+        <div class="informacoes-do-album">
+            <div id="nomeRedHot"></div>
+            <div id="discoRedHot"></div>
+            <div id="estiloRedHot"></div>
+        </div>
+
+        <div class="card-valor">
+            <div id="precoRedHot"></div>
+        </div>
+        <button class="cssbuttons-io-button"> Comprar
+                <div class="icon">
+                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+                </div>
+              </button>
+    </div>
+
+    <div class="card">
+        <div class="album-img">
+            <div id="imagemGuns"></div>
+        </div>
+
+        <div class="informacoes-do-album">
+            <div id="nomeGuns"></div>
+            <div id="discoGuns"></div>
+            <div id="estiloGuns"></div>
+        </div>
+
+        <div class="card-valor">
+            <div id="precoGuns"></div>
+            
+        </div>
+        <button class="cssbuttons-io-button"> Comprar
+                <div class="icon">
+                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+                </div>
+              </button>
+    </div>
+
+   
+   </section>
+
+   
+
+   
+</body>
+<script src="scriptProdutos.js"></script>
+
+<script>
+    const nav = document.querySelector(".nav");
+const btnMenu = document.querySelector(".btn-menu");
+const menu = document.querySelector(".menu");
+
+function handleButtonClick(event) {
+  if (event.type === "touchstart") event.preventDefault();
+  event.stopPropagation();
+  nav.classList.toggle("active");
+  handleClickOutside(menu, () => {
+    nav.classList.remove("active");
+    setAria();
+  });
+  setAria();
+}
+
+function handleClickOutside(targetElement, callback) {
+  const html = document.documentElement;
+  function handleHTMLClick(event) {
+    if (!targetElement.contains(event.target)) {
+      targetElement.removeAttribute("data-target");
+      html.removeEventListener("click", handleHTMLClick);
+      html.removeEventListener("touchstart", handleHTMLClick);
+      callback();
+    }
+  }
+  if (!targetElement.hasAttribute("data-target")) {
+    html.addEventListener("click", handleHTMLClick);
+    html.addEventListener("touchstart", handleHTMLClick);
+    targetElement.setAttribute("data-target", "");
+  }
+}
+
+function setAria() {
+  const isActive = nav.classList.contains("active");
+  btnMenu.setAttribute("aria-expanded", isActive);
+  if (isActive) {
+    btnMenu.setAttribute("aria-label", "Fechar Menu");
+  } else {
+    btnMenu.setAttribute("aria-label", "Abrir Menu");
+  }
+}
+
+btnMenu.addEventListener("click", handleButtonClick);
+btnMenu.addEventListener("touchstart", handleButtonClick);
+</script>
+</html>

@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@800;900&family=Itim&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,800;0,900;1,600&family=Itim&family=Righteous&display=swap');
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+body{
+  background-color: black;
+}
+header{
+  background-image: url(../API-albuns-main/img/elvis-presley-1482026_1920.jpg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #000000;
+}
+.titulo{
+  font-family: 'Bitter', serif;
+font-family: 'Itim', cursive;
+font-family: 'Righteous', cursive;
+  color: rgb(255, 206, 70);
+  text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+  padding: 5%;
+  margin-top: 4%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/*---------------------------tags para o menu hamburguer no celular e tablets ---------------*/
+
+.menu {
+  margin-top: 20%;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu a {
+  font-family: 'Bitter', serif;
+font-family: 'Itim', cursive;
+font-family: 'Righteous', cursive;
+  color: rgb(255, 206, 70);
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5em;
+}
+
+.menu a:hover {
+  background: var(--coral);
+}
+
+.btn-menu {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu a {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5em;
+}
+
+.menu a:hover {
+  background: #725f0a;
+}
+
+.btn-menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: block;
+    position: absolute;
+    top: 4.6875rem;
+    left: 0;
+    background: rgb(14, 13, 13);
+    text-align: center;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  .menu a {
+    padding: 2rem 0;
+    margin-inline: 1rem;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+  }
+  .btn-menu {
+    background: none;
+    border: none;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(255, 206, 70);
+    padding: 3rem 0;
+    cursor: pointer;
+  }
+  .hamburger {
+     
+    border-top: 0.125rem solid;
+    width: 1.25rem;
+  }
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 1.25rem;
+    height: 0.125rem;
+    background: currentColor;
+    margin-top: 0.3125rem;
+    position: relative;
+    transition: 0.3s;
+  }
+  .nav.active .menu {
+    background-color: rgb(37, 30, 10);
+    height: 30%;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .nav.active .hamburger {
+    border-top-color: transparent;
+  }
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
+}
+/*---------------------------acaba header e começa banner-----------------*/
+.banner{
+  margin-top: 3%;
+background-color: #191E20;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.gif-banner{
+  height: 300px;
+  width: 400px;
+}
+.assunto{
+  font-family: 'Bitter', serif;
+font-family: 'Itim', cursive;
+font-family: 'Righteous', cursive;
+border: #e2be1b solid 2px;
+text-shadow: 0.2em 0.2em 0.3em black;
+  color: white;
+  padding: 5%;
+}
+
+/* estilodo botão que usamos para abrir e fechar a mensagem */
+#topico{
+  margin-top: 10%;
+  margin-left: 10%;
+  font-family: 'Bitter', serif;
+  font-family: 'Itim', cursive;
+  font-family: 'Righteous', cursive;
+  color: rgb(255, 206, 70);
+}
+.accordion {
+  border: #1d1b1b solid 10px;
+    margin-top: 5%;
+    background-color: #272d30;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    color: rgb(250, 250, 250);
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    transition: 0.4s;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+  
+  /* estilo da mensagem que aparece quando clicada*/
+
+  a{
+    color: rgb(255, 206, 70);
+    text-decoration: none;
+  }
+  .panel-rap{
+    background-color: #191E20;
+    background-image: url(../API-albuns-main/img/imgRap.png);
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.842);
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+    font-family: 'Bitter', serif;
+    font-family: 'Itim', cursive;
+    font-family: 'Righteous', cursive;
+  }
+  .panel-rock{
+    background-color: #000000;
+    background-image: url(../API-albuns-main/img/imgRock.png);
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.842);
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+    font-family: 'Bitter', serif;
+    font-family: 'Itim', cursive;
+    font-family: 'Righteous', cursive;
+  }
+  .panel-pop{
+    background-color: #E56B6A;
+    background-image: url(../API-albuns-main/img/imgPop.png);
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.842);
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+    font-family: 'Bitter', serif;
+    font-family: 'Itim', cursive;
+    font-family: 'Righteous', cursive;
+  }
+  p{
+    font-size: 1.5em;
+    font-family: Ubuntu, sans-serif;
+  color: rgb(255, 206, 70);
+  text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+    padding: 2%;
+  }
+  .panel-albuns{
+    font-size: 1em;
+    text-align: center;
+    margin-left: 30%;
+  }
+  .album-texto{
+    color: aliceblue;
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+  }
+  #atualiza{
+    font-size: 16px;
+    margin-bottom: 2% ;
+ padding: 1em 3.3em;
+ transform: perspective(200px) rotateX(15deg);
+ color: white;
+ font-weight: 900;
+ border: none;
+ border-radius: 5px;
+ background: linear-gradient(0deg, rgb(251, 85, 63) 0%, rgb(189, 35, 35) 100%);
+ box-shadow: rgba(63,94,251,0.2) 0px 40px 29px 0px;
+ will-change: transform;
+ transition: all 0.3s;
+ border-bottom: 2px solid rgb(0, 0, 0);
+  }
+   #atualiza:hover {
+    transform: perspective(180px) rotateX(30deg) translateY(2px);
+   }
+   
+   #atualiza:active{
+    transform: perspective(170px) rotateX(36deg) translateY(5px);
+   }
+ /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .info{
+        font-size: 80%;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .accordion{
+        font-size: 80%;
+    }
+}
+
+/*-------------------começa tags para os cards de artistas-------------------*/
+.artistas-cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+  -15px -15px 30px rgb(60, 60, 60);
+ }
+ 
+.card:hover {
+  backdrop-filter: blur(6px);
+  transform: scale(1.05);
+}
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+.card-img{
+  width: 90%;
+  height: 90%;
+  border-radius: 10%;
+  padding-top: 5%;
+}
+
+/*---------------------------------------API produtos albuns---------------------*/
+.card{
+  background-color: rgba(184, 184, 184, 0.247);
+  border-radius: 5%;
+  width: 300px;
+  height: 430px;
+  
+}
+.card:hover{
+  transform: scale(1.2);
+}
+.album-img{
+  margin-top: 1%;
+  padding: 2%;
+ margin-left: 13%;
+}
+.informacoes-do-album{
+  background-color: rgb(155, 154, 154);
+  border-radius: 15px;
+  width: 200px;
+  text-align: center;
+  padding: 5%;
+  margin: 0 auto;
+}
+.card-valor{
+  padding: 2%;
+  text-align: center;
+}
+.card-valor{
+  background-color: rgb(202, 102, 102);
+  border-radius: 10px;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.cssbuttons-io-button {
+  background: #720b0b;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #720b0b;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  margin: 0 auto;
+  margin-top: 5%;
+ }
+ 
+ .cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #720b0b;
+  right: 0.3em;
+  transition: all 0.3s;
+ }
+ 
+ .cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+ }
+ 
+ .cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #720b0b;
+ }
+ 
+ .cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+ }
+ 
+ .cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+ }

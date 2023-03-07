@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Chakra+Petch:wght@600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.informacoes-laterais{
+    color: white;
+    padding: 6%;
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 5%;
+    background-color: rgb(0, 0, 0) !important;
+    box-shadow: inset 0 0 10px 10px rgb(24, 24, 32);
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    p{
+        font-size: 1em;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    p{
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    p{
+        font-size: 1;
+    }
+}
+
+#titulo{
+    font-size: 2em;
+    text-shadow: 
+    3px 3px 6px rgb(34, 253, 0),
+    -6px -6px 3px #333,
+    -9px 9px 7px #555,
+    12px -12px 7px #444
+}
+
+/*tags para aparecer texto digitado*/
+.line {
+    font-size: 1em;
+    border-right: 2px solid white;
+     text-shadow: 0 0 4px #fff, 0 0 4px #ff0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.texto-mobile{
+    font-size: 1em;
+     text-shadow: 0 0 4px #fff, 0 0 4px #ff0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*quando estiver no pc o texto mobile não aparecerá*/
+/* All Mobile Sizes (devices and browser)*/
+@media only screen and (min-width: 600px) and (max-width: 1900px) {
+    .texto-mobile{ 
+        display: none; 
+    } 
+}
+/*no celular o texto digitado não aparecerá*/
+@media only screen and (max-width: 480px) {
+    .line{ 
+      display: none !important; 
+    }
+}
+ 
+
+.typing-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 0.5s normal both;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blinkCursor {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+/*--------------------------------------------------------------------*/
+
+/*tags para os botões que linkam a outras páginas*/
+#link-home{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #132e0f;
+    padding: 2%;
+    border-radius: 5%;
+}
+#link-home:hover{
+    color: #22ff00;
+    padding: 3%;
+}
+
+/*abrir mensagem quando clica na pílula verde*/
+
+/* estilodo botão que usamos para abrir e fechar a mensagem */
+.accordion {
+    margin-top: 10%;
+    color: rgb(250, 250, 250);
+    background-color: black;
+    font-family: 'Courier New', monospace;
+    padding: 3%;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    box-shadow: inset 0 0 10px 10px rgb(66, 66, 71);
+    border-radius: 3%;
+  }
+  
+  /* estilo da mensagem que aparece quando clicada*/
+  .panel{
+    box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.842);
+    padding: 0 18px;
+    background-color: rgb(4, 39, 4);
+    padding: 2%;
+    display: none;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+ 
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #explicacao{
+        font-size: 80%;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .accordion{
+        font-size: 80%;
+    }
+}
+/*--------------------------------------fim da pagina home---------------------------*/
+
+
+/*-------------------------------------começa página cep-------------------------------*/
+.caixa-form{
+    height: auto;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: auto;
+    text-align: center;
+    color: #fff;
+    width: 50%;
+    padding: 4%;
+    background-color: rgba(51, 49, 49, 0.904) !important;
+    border-radius: 10px;
+}
+#caixa-forms{
+    margin: 0 auto;
+} 
+.cadastro-titulo{
+    text-shadow: 
+    3px 3px 6px rgb(34, 253, 0),
+    -6px -6px 3px #333,
+    -9px 9px 7px #555,
+    12px -12px 7px #444
+}
+.btn {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #132e0f;
+    padding: 2%;
+    border-radius: 5%;
+    border: none;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #132e0f;
+    color: #22ff00;
+}
+
+#link-guia{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    margin-bottom: 0%;
+}
+
+.conteudo-footer-cep{
+    margin-left: 5% ;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------*/
+
+/*---------------------começa o estilo da página dólar--------------------*/
+
+.banner{
+    font-family: 'Courier New', monospace;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(#000000, #0c4210);
+}
+.titulo-banner{
+    text-align: center;
+    color: rgb(230, 230, 230);
+    font-size: 1em;
+    display: block;
+    padding-top: 5%;
+    border-right: 2px solid white;
+    text-shadow: 0 0 4px rgb(0, 0, 0), 0 0 4px rgb(94, 231, 31);
+    white-space: nowrap;
+    overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+    .line{
+        word-break: break-word;
+    }
+   
+}
+.typing-animation-dolar {
+    animation: blinkCursor 500ms steps(30) infinite normal, typing 2s steps(30) 0.5s normal both;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 95%;
+    }
+}
+@keyframes blinkCursor {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.textos-banner{
+    color: white;
+    text-shadow: rgb(139, 139, 139) 0.1em 0.1em 0.2em;
+    padding: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px
+}
+.conteudo-dolar{
+    display: grid;
+    grid-template-areas:
+      "tema rel"
+      "moedas grafico grafico"
+      "footer footer footer";
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    color: white;
+}
+.titulo-dolar{
+    font-family: 'Caveat', cursive;
+font-family: 'Chakra Petch', sans-serif;
+    background-image: linear-gradient(to bottom, rgb(44, 216, 53), rgb(221, 221, 221), rgb(78, 226, 58));
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+}
+.tema{
+    padding: 2%;
+}
+.tema-e-relogio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 8%;
+    padding: 5%;
+}
+
+.moedas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+.caixa-dolar, .caixa-euro, .caixa-bitcoin{
+background-color: #333;
+padding: 2%;
+width: 12%;
+height: 50%;
+border-radius: 5%;
+}
+#euro, #dolar, #bitcoin, #high-dolar, #low-dolar, #high-euro, #low-euro, #high-bitcoin, #low-bitcoin{
+    cursor: pointer;
+    width: 30%;
+    color: #000;
+	padding: 10px;
+	border: none;
+	margin-bottom: 10px;
+	border-radius: 50px;
+    font-family: 'Courier New', monospace;
+}
+
+#rel{
+    font-family: 'Caveat', cursive;
+font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    color: rgb(81, 240, 7);
+    font-weight: bold;
+    font-size: 2em;
+    width: 140px;
+    background-color: #000;
+}
+
+body .container {
+  display: flex;
+padding-bottom: 5%;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+body .container .card-api {
+  position: relative;
+  min-width: 320px;
+  height: 400px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+
+body .container .card-api .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  
+}
+
+body .container .card-api .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container .card-api .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card-api .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card-api .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .container .card-api .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card-api .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card-api .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container .card-api .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+.main-dolar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+.lateral-text-dolar{
+    font-family: 'Caveat', cursive;
+    font-family: 'Chakra Petch', sans-serif;
+     text-align: center;
+    background-color: rgb(30, 31, 30);
+    height: 40%;
+    width: 50%;
+    padding: 10%;
+    color: #fff;
+    text-shadow: 
+    3px 3px 6px rgb(34, 253, 0),
+    -6px -6px 3px #333,
+    -9px 9px 7px #555,
+    12px -12px 7px #444
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .lateral-text-dolar{
+        font-size: 8px;
+    }
+}
+.img-lateral-dolar{
+    height: 20%;
+    width: 40%;
+}
+
+/*---------------------cards de notícia-------------------------------------------*/
+.mural-noticias{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+}
+.card{
+    width: 18em;
+    height: 25em;
+    background: white;
+    padding: .4em;
+    border-radius: 4%;
+  }
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .mural-noticias{
+        display:block;
+        flex-direction: column;
+        margin-left: 13%;
+    }
+    .card{
+        margin-bottom: 4%;
+        width: 15em;
+        height: 20em;
+    }
+    .img-lateral-dolar{
+        height: 25%;
+        width: 50%;
+    }
+}
+  .card-image{
+    background-color: rgb(236, 236, 236);
+    background-image: url(../API-cep-dolar-main/img/coelho.png);
+    width: 100%;
+    height: 60%;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .card-image:hover {
+    transform: scale(0.98);
+  }
+  
+  .category {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+  }
+  
+  .category:hover {
+    cursor: pointer;
+  }
+  
+  .heading {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+  }
+  
+  .heading:hover {
+    cursor: pointer;
+  }
+  
+  .author {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px;
+  }
+  
+  .name {
+    font-weight: 600;
+  }
+  
+  .name:hover {
+    cursor: pointer;
+  }
+   

@@ -1,0 +1,26 @@
+{
+    "metallica":{
+        "nome": "Nirvana",
+        "albuns": "in Utero",
+        "style": "Grunge",
+        "price": "R$ 120,00",
+        "image": "<img src='img/inutero.png' width='200px'>"
+    },
+
+    "redHot":{
+        "nome": "Red Hot Chili Peppers",
+        "albuns": "Californication",
+        "style": "Rock",
+        "price": "R$ 100,00",
+        "image": "<img src='img/californication.png' width='200px'>"
+    },
+
+    "guns":{
+        "nome": "Guns 'n Roses",
+        "albuns": "Appetite for Destruction",
+        "style": "Hard Rock",
+        "price": "R$ 200,00",
+        "image": "<img src='img/appetite.png' width='200px'>"
+    }
+    
+}

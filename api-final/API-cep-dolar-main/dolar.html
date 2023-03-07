@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="imagem/png" href="img/coelho.png">
+    <title>Cotação do Dólar, Euro e Bitcoin</title>
+</head>
+
+<body>
+    <section id="banner" class="banner">
+        <h2 class="titulo-banner typing-animation-dolar">Vivemos em uma realidade programada.</h2>
+        <br><br>
+        <section class="conteudo-dolar">
+            
+                <h2 class="titulo-dolar">{ Economia - variação do dólar, euro e bitcoin }</h2>
+              
+            <div class="tema-e-relogio">
+                <h3 class="tema">Veja abaixo as variações das moedas ao longo do dia com base no real</h3>
+                <input type="text" id="rel">
+            </div>
+
+                <div class="container">
+                    <div class="card-api">
+                      <div class="box">
+                        <div class="content">
+                            <label for="dolar">Dólar:</label>
+                            <input type="text" id="dolar" readonly>
+                            <br>
+                            <label for="dolar">Mais baixo:</label>
+                            <input type="text" id="low-dolar" readonly>
+                            <br>
+                            <label for="dolar">mais alto:</label>
+                            <input type="text" id="high-dolar" readonly>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card-api">
+                      <div class="box">
+                        <div class="content">
+                            <label for="euro">Euro</label>
+                            <input type="text" id="euro" readonly>
+                            <br>
+                            <label for="euro">Mais baixo:</label>
+                            <input type="text" id="low-euro" readonly>
+                            <br>
+                            <label for="euro">mais alto:</label>
+                            <input type="text" id="high-euro" readonly>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="card-api">
+                      <div class="box">
+                        <div class="content">
+                            <label for="bitcoin">Bitcoin</label>
+                            <input type="text" id="bitcoin" readonly>
+                            <br>
+                            <label for="bitcoin">Mais baixo:</label>
+                            <input type="text" id="low-bitcoin" readonly>
+                            <br>
+                            <label for="bitcoin">mais alto:</label>
+                            <input type="text" id="high-bitcoin" readonly>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+        </section>
+    </section> 
+
+    <div class="main-dolar">
+        <div class="lateral-text-dolar">
+            <h1 class="titulo-lateral">Notícias sobre economia mundial</h1>
+        </div>
+       
+        <img src="img/fundocep.jpg" class="img-lateral-dolar">
+    </div>
+
+    <div class="mural-noticias">
+        <div class="card">
+            <div class="card-image"><img src="img/noticia.png" width="100%" height="100%"></div>
+            <div class="category"> Economia </div>
+            <div class="heading"> Dólar tem nova queda e fecha no menor patamar desde agosto
+                <div class="author"> By <span class="name">Abi</span> 1 days ago</div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-image"><img src="img/noticia.png" width="100%" height="100%"></div>
+            <div class="category"> Economia </div>
+            <div class="heading">FMI revisa para cima crescimento global para 2023; economia brasileira deve crescer 1,5%</div>
+            <div class="author"> By <span class="name">Abi</span> 2 days ago</div>
+        </div> 
+
+        <div class="card">
+            <div class="card-image"><img src="img/noticia.png" width="100%" height="100%"></div>
+            <div class="category"> Economia </div>
+            <div class="heading">Copom mantém taxa básica de juros da economia em 13,75% na primeira reunião do ano
+                <div class="author"> By <span class="name">Abi</span> 4 days ago</div>
+            </div>
+        </div>
+    </div>
+    <script src="./scriptdolar.js"></script>
+</body>
+
+<script>
+    //JS do relógio
+function relogio(){
+    var data=new Date();
+    var hor=data.getHours();
+    var min=data.getMinutes();
+    var seg=data.getSeconds();
+    
+    if(hor < 10){
+        hor="0"+hor;
+    }
+    if(min < 10){
+        min="0"+min;
+    }
+    if(seg < 10){
+        seg="0"+seg;
+    }
+    
+    var horas=hor + ":" + min + ":" + seg;
+    
+    document.getElementById("rel").value=horas;
+}
+
+var timer=setInterval(relogio,1000);
+</script>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <link rel="stylesheet" href="style.css">
+    <title>API - Manual de Albuns</title>
+</head>
+
+<body>
+
+  <header> 
+      <h1 class="titulo">Lord of the Records</h1>
+      <nav class="nav">
+        <button class="btn-menu" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+            aria-expanded="false">
+            Menu<span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="#topico">Estilos</a></li>
+          <li><a href="#artistas">Artistas</a></li>
+          <li><a href="produtosAlbuns.html">Produtos</a></li>
+          <li><a href="/">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h3 class="assunto">O site perfeito para você encontrar rapidamente informações do mundo da música.
+      informações sobre álbuns, músicas, artistas e muito mais</h3>
+
+      <img class="gif-banner" src="./img/disco.gif">
+  </div>
+
+   <section>
+
+    <div class="estilos">
+      <h2 id="topico">Estilo - Escolha um vinil para ser direcionado a alguns álbuns desse estilo</h2>
+        <!-- Os estilos musicais dentro dos botões chamará uma API que contém alguns albuns, 
+            ao ser direcionado a esses albuns o usuário terá mais três opções que levará 
+            a outra api de informações dos respectivos albuns -->
+     <input type="image" src="img/lp1.png" width="20%" height="25%" class="accordion" id="rock">
+      <div class="panel-rock">
+        <div class="panel-albuns">
+        <p>Clique no nome de um álbum para ver as informações dele</p>
+        <div class="album-texto">
+        <input type="image" src="img/metallicaAlbum.png" width="20%" height="20%" onclick="chamaAlbum1()" class="info" id="album1">
+        <div class="caixa-info1">
+            <div id="artista1"></div>
+            <div id="estilo1"></div>
+            <div id="lancamento1"></div>
+            <div id="quantidadeMusicas1"></div>
+            <div id="lucro1"></div>
+            <div id="single1"></div>
+            <div id="linkalbum1"></div>
+        </div>
+      </div>
+
+      <div class="album-texto">
+        <input type="image" src="img/gunsAlbum.png" width="20%" height="20%" onclick="chamaAlbum2()" class="info" id="album2">
+       <div class="caixa-info2">
+        <div id="artista2"></div>
+        <div id="estilo2"></div>
+        <div id="lancamento2"></div>
+        <div id="quantidadeMusicas2"></div>
+        <div id="lucro2"></div>
+        <div id="single2"></div>
+        <div id="linkalbum2"></div>
+       </div>
+      </div>
+
+       <div class="album-texto">
+        <input type="image" src="img/redhotAlbum.png" width="20%" height="20%" onclick="chamaAlbum3()" class="info"  id="album2">
+        <div class="caixa-info3">
+            <div id="artista3"></div>
+            <div id="estilo3"></div>
+            <div id="lancamento3"></div>
+            <div id="quantidadeMusicas3"></div>
+            <div id="lucro3"></div>
+            <div id="single3"></div>
+            <div id="linkalbum3"></div>
+        </div>
+      </div>
+<input type="button" value="atualizar" id="atualiza" onclick="window.location.reload()">
+</div>
+      </div>
+<!-- ---------------------------------------------------------------------------------------------- -->
+     <input type="image" src="img/lp2.png" width="20%" height="25%" class="accordion" id="pop">
+     <div class="panel-pop">
+      <div class="panel-albuns">
+        <p>Clique no nome de um álbum para ver as informações dele</p>
+        <div class="album-texto">
+        <input type="image" src="img/taylorAlbum.png" width="20%" height="20%" onclick="chamaAlbum4()" id="album4">
+        <div class="caixa-info4">
+            <div id="artista4"></div>
+            <div id="estilo4"></div>
+            <div id="lancamento4"></div>
+            <div id="quantidadeMusicas4"></div>
+            <div id="lucro4"></div>
+            <div id="single4"></div>
+            <div id="linkalbum4"></div>
+        </div>
+      </div>
+
+        <div class="album-texto">
+        <input type="image" src="img/justinAlbum.png" width="20%" height="20%" onclick="chamaAlbum5()" id="album5">
+        <div class="caixa-info5">
+            <div id="artista5"></div>
+            <div id="estilo5"></div>
+            <div id="lancamento5"></div>
+            <div id="quantidadeMusicas5"></div>
+            <div id="lucro5"></div>
+            <div id="single5"></div>
+            <div id="linkalbum5"></div>
+        </div>
+      </div>
+
+        <div class="album-texto">
+        <input type="image" src="img/topAlbum.png" width="20%" height="20%" onclick="chamaAlbum6()" id="album6">
+        <div class="caixa-info6">
+            <div id="artista6"></div>
+            <div id="estilo6"></div>
+            <div id="lancamento6"></div>
+            <div id="quantidadeMusicas6"></div>
+            <div id="lucro6"></div>
+            <div id="single6"></div>
+            <div id="linkalbum6"></div>
+        </div>
+      </div>
+
+        <input type="button" value="atualizar" id="atualiza" onclick="window.location.reload()">
+      </div>
+      </div>
+
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+     <input type="image" src="img/lp3.png" width="20%" height="25%" class="accordion" id="rap">
+        <div class="panel-rap">
+          <div class="panel-albuns">
+            <p>Clique no nome de um álbum para ver as informações dele</p>
+            <div class="album-texto">
+            <input type="image" src="img/eminemalbum.png" width="20%" height="20%" onclick="chamaAlbum7()" id="album7">
+            <div class="caixa-info7">
+                <div id="artista7"></div>
+                <div id="estilo7"></div>
+                <div id="lancamento7"></div>
+                <div id="quantidadeMusicas7"></div>
+                <div id="lucro7"></div>
+                <div id="single7"></div>
+                <div id="linkalbum7"></div>
+            </div>
+          </div>
+
+          <div class="album-texto">
+            <input type="image" src="img/racionais.png" width="20%" height="20%"  onclick="chamaAlbum8()" id="album8">
+        <div class="caixa-info8">
+            <div id="artista8"></div>
+            <div id="estilo8"></div>
+            <div id="lancamento8"></div>
+            <div id="quantidadeMusicas8"></div>
+            <div id="lucro8"></div>
+            <div id="single8"></div>
+            <div id="linkalbum8"></div>
+        </div>
+      </div>
+
+      <div class="album-texto">
+            <input type="image" src="img/criolo.png" width="20%" height="20%" onclick="chamaAlbum9()" id="album9">
+            <div class="caixa-info9">
+                <div id="artista9"></div>
+                <div id="estilo9"></div>
+                <div id="lancamento9"></div>
+                <div id="quantidadeMusicas9"></div>
+                <div id="lucro9"></div>
+                <div id="single9"></div>
+                <div id="linkalbum9"></div>
+            </div>
+          </div>
+            <input type="button" value="atualizar" id="atualiza" onclick="window.location.reload()">
+          
+          </div>
+          
+      </div>
+    </div>
+
+   </section>
+
+   <section id="artistas">
+    <h2 id="topico">Escolha um artista para ver informações</h2>
+      <div class="artistas-cards">
+        <div class="card">
+          <img class="card-img" src="./img/theweekdn.png" >
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="./img/imaginedragons.png" >
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="./img/top.png" >
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="./img/maneskin.png" >
+        </div>
+      </div>
+    
+    
+    
+   </section>
+
+   <script src="script.js"></script>
+
+</body>
+</html>
